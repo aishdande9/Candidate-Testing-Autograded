@@ -8,7 +8,7 @@ let candidateName = "";
 let question = "Who was the first American woman in space? ";
 let correctAnswer = "Sally Ride";
 let candidateAnswer = "";
-
+``
 //TODO: Variables for Part 2
 const questions = [
   "Who was the first American woman in space? ",
@@ -18,7 +18,7 @@ const questions = [
   "What is the minimum crew size for the ISS? ",
 ];
 const correctAnswers = ["Sally Ride", "true", "40", "Trajectory", '3'];
-const candidateAnswers = [5];
+const candidateAnswers = [];
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
@@ -45,7 +45,7 @@ function gradeQuiz(candidateAnswers) {
         candidateScore++;
         console.log(candidateAnswers[i] +":you answered correctly");
       }else{
-        console.log(candidateAnswers[i] +":wrong answer")
+        console.log(candidateAnswers[i] +":wrong answer");
       }
     }
     
@@ -66,11 +66,11 @@ function gradeQuiz(candidateAnswers) {
 function runProgram() {
   askForName();
   // TODO 1.1c: Greet candidate using their name //
-  console.log("Hi!! ", this.candidateName);
+  console.log("Hi!! ", candidateName);
   askQuestion();
-  gradeQuiz(this.candidateAnswers);
+  gradeQuiz(candidateAnswers);
 }
-
+runProgram();
 
 
 // ----------- Don't write any code or change any code below this line ---------- //
