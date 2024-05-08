@@ -69,6 +69,7 @@ function runProgram() {
   console.log("Hi!! ", candidateName);
   askQuestion();
   gradeQuiz(candidateAnswers);
+
 }
 runProgram();
 
