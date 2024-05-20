@@ -1,5 +1,6 @@
-const input = require('readline-sync');
-
+input = require('readline-sync'); // Importing the readline-sync module
+// // 
+// 
 // TODO 2: modify your quiz app to ask 5 questions //
 
 // TODO 1.1a: Define candidateName //
@@ -28,7 +29,7 @@ function askForName() {
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 
-  console.log("We have a short quiz for you "+candidateName);
+  console.log("We have a short quiz for you !!");
     for (let i = 0; i < questions.length; i++) {
       candidateAnswer = input.question(questions[i]);
       candidateAnswers.push(candidateAnswer);
@@ -43,13 +44,13 @@ function gradeQuiz(candidateAnswers) {
     for(let i = 0;i<candidateAnswers.length;i++){
       if(candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()){
         candidateScore++;
-        console.log(candidateAnswers[i] +":you answered correctly");
+        console.log(candidateAnswers[i] +":  you answered correctly");
       }else{
-        console.log(candidateAnswers[i] +":wrong answer");
+        console.log(candidateAnswers[i] +"  : is a wrong answer");
       }
     }
     
-    console.log(candidateScore +":your total score")
+    console.log("your total score is :"+candidateScore)
   let grade; //TODO 3.2 use this variable to calculate the candidates score.
   grade = (candidateScore / questions.length) * 100;
   console.log("You scored " + grade + "%.");
