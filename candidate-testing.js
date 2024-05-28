@@ -22,7 +22,7 @@ const correctAnswers = ["Sally Ride", "true", "40", "Trajectory", '3'];
 const candidateAnswers = [];
 
 function askForName() {
-  // TODO 1.1b: Ask for candidate's name //
+  // TODO 1.1b: Ask for candidate's name /
   candidateName = input.question("Hi! Please enter your name: ");
 }
 
@@ -40,20 +40,25 @@ function askQuestion() {
 function gradeQuiz(candidateAnswers) {
   let candidateScore = 0;
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly //
-  
+  console.log("-------------------------quiz results----------------------------------")
     for(let i = 0;i<candidateAnswers.length;i++){
       if(candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()){
         candidateScore++;
-        console.log(candidateAnswers[i] +":  you answered correctly");
+
+        console.log(questions[i]);
+        console.log(candidateAnswers[i] +": your answer");
+        console.log(correctAnswers[i] + ": correct answer"+"\n");
       }else{
+        console.log(questions[i]);
         console.log(candidateAnswers[i] +"  : is a wrong answer");
+        console.log(correctAnswers[i] + ": is correct answer"+"\n");
       }
     }
     
     console.log("your total score is :"+candidateScore)
   let grade; //TODO 3.2 use this variable to calculate the candidates score.
   grade = (candidateScore / questions.length) * 100;
-  console.log("You scored " + grade + "%.");
+  console.log("Your OverAll Grade is " + grade + "%.");
   if (grade >= 80) {
     console.log("Congratulations, " + candidateName + "! You passed the quiz!");
   } else {
